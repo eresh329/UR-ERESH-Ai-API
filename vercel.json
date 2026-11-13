@@ -1,10 +1,20 @@
 
 {
-  "$schema": "https://openapi.vercel.sh/vercel.json",
-  "rewrites": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/ask",
-      "destination": "/api/ask"
+      "src": "api/ask.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/ask",
+      "dest": "api/ask.py"
+    },
+    {
+      "src": "/api/ask",
+      "dest": "api/ask.py"
     }
   ]
 }
