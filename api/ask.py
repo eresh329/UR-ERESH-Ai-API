@@ -6,7 +6,7 @@ from urllib.parse import urlparse, parse_qs
 from google import genai
 
 
-class handler(BaseHTTPRequestHandler):
+class handler(BaseHTTPRequesthandler):
 
     def send_json(self, status, data):
         self.send_response(status)
